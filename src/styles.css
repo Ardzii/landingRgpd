@@ -6,3 +6,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .container {
     padding: 3rem;
 }
+
+.inlineFormControl {
+    margin-left: 1.5rem;
+}

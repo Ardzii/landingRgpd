@@ -1,2 +1,49 @@
-<p>contact-form works!</p>
-<button mat-raised-button matStepperNext color="accent">Siguiente</button>
+<p>
+    <mat-form-field appearance="fill">
+        <mat-label>Nombre:</mat-label>
+        <input matInput placeholder="Nombre">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <!-- <mat-hint>Hint</mat-hint> -->
+    </mat-form-field>
+    <mat-form-field class="inlineFormControl" appearance="fill">
+        <mat-label>Primer Apellido:</mat-label>
+        <input matInput placeholder="Apellido">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <!-- <mat-hint>Hint</mat-hint> -->
+    </mat-form-field>
+    <mat-form-field class="inlineFormControl" appearance="fill">
+        <mat-label>Segundo Apellido:</mat-label>
+        <input matInput placeholder="1o Apellido">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <!-- <mat-hint>Hint</mat-hint> -->
+    </mat-form-field>
+</p>
+<p>
+    <mat-form-field appearance="fill">
+        <mat-label>CIF / NIF:</mat-label>
+        <input matInput placeholder="NIF">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <!-- <mat-hint>Hint</mat-hint> -->
+    </mat-form-field>
+    <mat-slide-toggle style="margin-left: 1rem;">Autonomo</mat-slide-toggle>
+</p>
+<p>
+</p>
+<p>
+    <mat-form-field appearance="fill">
+        <mat-label>Telefono:</mat-label>
+        <input matInput placeholder="Telefono">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <!-- <mat-hint>Hint</mat-hint> -->
+    </mat-form-field>
+    <mat-form-field class="inlineFormControl" appearance="fill">
+        <mat-label>Email:</mat-label>
+        <input matInput placeholder="Email">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <!-- <mat-hint>Hint</mat-hint> -->
+    </mat-form-field>
+</p>
+<mat-card-actions>
+    <button mat-raised-button matStepperPrevious color="accent">Back</button>
+    <button mat-raised-button matStepperNext color="accent">Siguiente</button>
+</mat-card-actions>
