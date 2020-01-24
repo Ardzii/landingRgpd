@@ -2,15 +2,19 @@
     <mat-card>
       <mat-horizontal-stepper linear>
         <mat-step>
+            <ng-template matStepLabel>Privacidad y Condiciones</ng-template>
             <app-rgpd></app-rgpd>
         </mat-step>
         <mat-step>
+            <ng-template matStepLabel>Datos de contacto</ng-template>
             <app-contact-form></app-contact-form>
         </mat-step>
         <mat-step>
+            <ng-template matStepLabel>Detalles de la operación</ng-template>
             <app-operation-details></app-operation-details>
         </mat-step>
         <mat-step>
+            <ng-template matStepLabel>Documentos</ng-template>
             <app-upload-form></app-upload-form>
         </mat-step>
       </mat-horizontal-stepper>
