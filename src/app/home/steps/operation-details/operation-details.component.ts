@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-operation-details',
@@ -16,7 +17,7 @@ export class OperationDetailsComponent implements OnInit {
   iEquip = 1;
 
   
-  constructor() { }
+  constructor(private snackBar: MatSnackBar) { }
 
   ngOnInit() {
     
@@ -29,14 +30,24 @@ export class OperationDetailsComponent implements OnInit {
       this.equipmentNumber.push(this.iEquip);
     } else {
       this.maxEquipReached = true;
+      this.fullEquipAlert()
     }
   }
 
   deleteEquipment() {
     if(this.iEquip > 1) {
+      if (this.maxEquipReached) {
+        this.maxEquipReached = false;
+      }
       this.iEquip--;
       this.equipmentNumber.pop();
     }
+  }
+
+  fullEquipAlert() {
+    this.snackBar.open('Max Equipos: No puede añadir mas equipos', 'OK', {
+      duration: 5000,
+    });
   }
 
 }

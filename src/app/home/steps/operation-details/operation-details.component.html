@@ -1,13 +1,29 @@
-<h3>Detalles de la operación</h3>
-<div>
+<mat-card-title>
+  Detalles de la operación
+</mat-card-title>
+<mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button color="primary" (click)="addEquipment()">Agregar equipo</button>
-    <button mat-raised-button color="warn" (click)="deleteEquipment()">Quitar el ultimo equipo</button>
+    <button mat-raised-button color="primary" (click)="addEquipment()" [disabled]="maxEquipReached">Agregar equipo</button>
+    <button *ngIf="iEquip > 1" mat-raised-button color="warn" (click)="deleteEquipment()">Quitar equipo {{iEquip}}</button>
   </mat-card-actions>
   <ng-container *ngFor="let i of equipmentNumber">
     <app-new-equipment [equipNumber]="i"></app-new-equipment>
   </ng-container>
+</mat-card-content>
+<mat-divider></mat-divider>
+<div style="margin-top: 3rem;">
+  <h3>Inversión total: {{'ADD INVESTMENTS'}}</h3>
+  <mat-label>
+    Plazo deseado:
+  </mat-label>
+  <mat-slider
+  style="margin-left: 1rem;"
+  thumbLabel
+  tickInterval="12"
+  min="12"
+  max="84"></mat-slider>
 </div>
+<mat-divider></mat-divider>
 <mat-card-actions>
   <button mat-raised-button matStepperPrevious color="accent">Regresar</button>
   <button mat-raised-button matStepperNext color="accent">Continuar</button>
