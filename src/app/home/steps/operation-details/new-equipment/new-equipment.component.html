@@ -1,0 +1,22 @@
+<div>
+    <mat-form-field>
+        <mat-label>Sector del equipo</mat-label>
+        <mat-select (selectionChange)=selectSector($event.value)>
+        <mat-option *ngFor="let sector of sectors" value="{{sector.value}}">
+            {{sector.viewValue}}
+        </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="inlineFormControl" appearance="legacy">
+        <mat-label>Marca</mat-label>
+        <input matInput placeholder="Marca">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+    <mat-form-field class="inlineFormControl" appearance="legacy">
+        <mat-label>Modelo</mat-label>
+        <input matInput placeholder="Modelo">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+</div>

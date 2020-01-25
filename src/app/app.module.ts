@@ -8,9 +8,10 @@ import { RgpdComponent } from './home/steps/rgpd/rgpd.component';
 import { ContactFormComponent } from './home/steps/contact-form/contact-form.component';
 import { OperationDetailsComponent } from './home/steps/operation-details/operation-details.component';
 import { UploadFormComponent } from './home/steps/upload-form/upload-form.component';
-import { MatToolbarModule, MatCardModule, MatStepperModule, MatFormFieldModule, MatButtonModule, MatIconModule, MatInputModule, MatSlideToggleModule, MatSelectModule } from '@angular/material';
+import { MatToolbarModule, MatCardModule, MatStepperModule, MatFormFieldModule, MatButtonModule, MatIconModule, MatInputModule, MatSlideToggleModule, MatSelectModule, MatCheckboxModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
+import { NewEquipmentComponent } from './home/steps/operation-details/new-equipment/new-equipment.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     ContactFormComponent,
     OperationDetailsComponent,
     UploadFormComponent,
-    NavbarComponent
+    NavbarComponent,
+    NewEquipmentComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     MatIconModule,
     MatInputModule,
     MatSlideToggleModule,
-    MatSelectModule
+    MatSelectModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

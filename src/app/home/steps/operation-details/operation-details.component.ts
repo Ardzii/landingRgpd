@@ -6,10 +6,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./operation-details.component.css']
 })
 export class OperationDetailsComponent implements OnInit {
+  // DOM Functionalities
+  equipmentNumber = [
+    1
+  ];
+  maxEquipReached = false;
 
+  // Local variables
+  iEquip = 1;
+
+  
   constructor() { }
 
   ngOnInit() {
+    
+  }
+
+
+  addEquipment() { 
+    if(this.iEquip < 5) {
+      this.iEquip++;
+      this.equipmentNumber.push(this.iEquip);
+      console.log(this.iEquip)
+    } else {
+      this.maxEquipReached = true;
+    }
   }
 
 }
