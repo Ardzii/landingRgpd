@@ -27,9 +27,15 @@ export class OperationDetailsComponent implements OnInit {
     if(this.iEquip < 5) {
       this.iEquip++;
       this.equipmentNumber.push(this.iEquip);
-      console.log(this.iEquip)
     } else {
       this.maxEquipReached = true;
+    }
+  }
+
+  deleteEquipment() {
+    if(this.iEquip > 1) {
+      this.iEquip--;
+      this.equipmentNumber.pop();
     }
   }
 

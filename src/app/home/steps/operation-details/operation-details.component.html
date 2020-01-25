@@ -1,8 +1,11 @@
 <h3>Detalles de la operación</h3>
 <div>
-  <button mat-raised-button color="accent" (click)="addEquipment()">Agregar equipo</button>
-  <ng-container *ngFor="let i of iEquip.length">
-    <app-new-equipment></app-new-equipment>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="addEquipment()">Agregar equipo</button>
+    <button mat-raised-button color="warn" (click)="deleteEquipment()">Quitar el ultimo equipo</button>
+  </mat-card-actions>
+  <ng-container *ngFor="let i of equipmentNumber">
+    <app-new-equipment [equipNumber]="i"></app-new-equipment>
   </ng-container>
 </div>
 <mat-card-actions>

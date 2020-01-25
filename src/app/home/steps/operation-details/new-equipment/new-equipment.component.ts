@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { EquipmentService } from '../equipment.service';
 
 
@@ -8,10 +8,10 @@ import { EquipmentService } from '../equipment.service';
   styleUrls: ['./new-equipment.component.css']
 })
 export class NewEquipmentComponent implements OnInit {
-
   // DOM Functionalities
   selectedSector: string;
   selectedFamily: string;
+  @Input() equipNumber;
 
   // Local variables
   sectors;
