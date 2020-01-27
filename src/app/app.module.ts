@@ -8,7 +8,7 @@ import { RgpdComponent } from './home/steps/rgpd/rgpd.component';
 import { ContactFormComponent } from './home/steps/contact-form/contact-form.component';
 import { OperationDetailsComponent } from './home/steps/operation-details/operation-details.component';
 import { UploadFormComponent } from './home/steps/upload-form/upload-form.component';
-import { MatToolbarModule, MatCardModule, MatStepperModule, MatFormFieldModule, MatButtonModule, MatIconModule, MatInputModule, MatSlideToggleModule, MatSelectModule, MatCheckboxModule, MatDividerModule, MatSnackBarModule, MatSliderModule, MatGridListModule } from '@angular/material';
+import { MatToolbarModule, MatCardModule, MatStepperModule, MatFormFieldModule, MatButtonModule, MatIconModule, MatInputModule, MatSlideToggleModule, MatSelectModule, MatCheckboxModule, MatDividerModule, MatSnackBarModule, MatSliderModule, MatGridListModule, MatExpansionModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NewEquipmentComponent } from './home/steps/operation-details/new-equipment/new-equipment.component';
@@ -41,7 +41,8 @@ import { NewEquipmentComponent } from './home/steps/operation-details/new-equipm
     MatDividerModule,
     MatSnackBarModule,
     MatSliderModule,
-    MatGridListModule
+    MatGridListModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
